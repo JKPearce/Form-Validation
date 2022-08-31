@@ -1,7 +1,11 @@
-:root{
-    height: 100vh;
-    width: 100vw;
-    background-color: gray;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  height: 100vh;
+  width: 100vw;
+  background-color: gray;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
 }
 
 *,
@@ -12,55 +16,66 @@
   margin: 0;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
+form {
+  width: 500px;
 }
 
-li{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 20px;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
 }
 
-label{
-    flex: 1 120px;
+li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-input{
-    padding: 15px;
-    border: 2px solid lightblue;
-    font-size: 100%;
-    outline: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-
+label {
+  flex: 1 120px;
 }
 
-input:focus:invalid{
-    border: 2px solid red;
+input {
+  padding: 15px;
+  border: 2px solid lightblue;
+  font-size: 100%;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-input:active{
-    border: 2px solid lightblue !important; 
+input:focus:invalid {
+  border: 2px solid red;
 }
 
-input:valid{
-    border: 2px solid green;
+input:active {
+  border: 2px solid lightblue !important;
 }
 
-button{
-    margin: auto;
-    padding: 8px 16px;
-    border-radius: 2px;
-    cursor: pointer;
+input:valid {
+  border: 2px solid green;
+}
+
+button {
+  margin: auto;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.error {
+  display: none;
+  color: red;
+  text-shadow: 1px 1px black;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
