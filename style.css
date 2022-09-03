@@ -52,12 +52,8 @@ input {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-input:focus:invalid {
+input:invalid{
   border: 2px solid red;
-}
-
-input:active {
-  border: 2px solid lightblue !important;
 }
 
 input:valid {
@@ -73,9 +69,10 @@ button {
 }
 
 .error {
-  display: none;
+
   color: red;
   text-shadow: 1px 1px black;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  font-weight: bold;
 }

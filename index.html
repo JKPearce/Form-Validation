@@ -21,6 +21,7 @@
             placeholder="email@email.com"
             required
           />
+          <p class="error" id="emailError"></p>
         </li>
         <li>
           <label for="country">Country:</label>
@@ -30,9 +31,11 @@
             name="country"
             id="country"
             placeholder="Australia"
+            pattern="[A-Za-z]+"
+            title="Country should only contain letters e.g Australia"
             required
           />
-          <p class="error" id="countryError">Please enter a valid Country</p>
+          <p class="error" id="countryError"></p>
         </li>
         <li>
           <label for="zipCode">Zip Code:</label>
@@ -42,9 +45,11 @@
             name="zipCode"
             id="zipCode"
             placeholder="2000"
+            pattern="[0-9]+"
+            title="Please only use numbers EG 2050"
             required
           />
-          <p class="error" id="zipCodeError">Please enter a valid Zip Code</p>
+          <p class="error" id="zipCodeError"></p>
         </li>
         <li>
           <label for="password">Password:</label>
@@ -53,8 +58,12 @@
             class="input"
             name="password"
             id="password"
+            placeholder="Password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])((?=.*\W)|(?=.*_))^[^ ]+$"
+            title="Password must contain at least 1 uppercase, 1 lowercase, 1 number, 1 special character and at least 8 characters long"
             required
           />
+          <p class="error" id="passwordInputError"></p>
         </li>
         <li>
           <label for="passwordConfirm">Confirm Password:</label>
@@ -63,8 +72,10 @@
             class="input"
             name="passwordConfirm"
             id="passwordConfirm"
+            placeholder="Confirm Password"
             required
           />
+          <p class="error" id="confirmPasswordInputError"></p>
         </li>
       </ul>
       <ul>
